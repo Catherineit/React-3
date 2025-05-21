@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const images = [
-  '/img/slider1.jpg',
-  '/img/slider2.jpg',
-  '/img/slider3.jpg',
-  '/img/slider4.jpg',
+  '../assets/img/TechHome ByFalabella.jpg',
+'../assets/img/TechHome Juegos.jpg',
+'../assets/img/TechhomePC.jpg',
+'../assets/img/TechHome Envios.jpg'
 ];
 
 export const ImageCarousel: React.FC = () => {

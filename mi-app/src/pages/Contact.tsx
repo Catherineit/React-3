@@ -7,23 +7,9 @@ import Form from 'react-bootstrap/Form';
 
 const Contact: React.FC = () => {
   return (
-    <>
-      <header className="header-container">
-        <div className="logo">
-          <img src="/img/LogoEmpresa.png" alt="Logo de la Empresa" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/services">Servicios</a></li>
-            <li><a href="/about-us">Nosotros</a></li>
-            <li><a href="/contact" className="active">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
 
       <main className="my-5">
-        <Container>
+        <Container fluid className="px-4">
           {/* Información de contacto */}
           <section className="mb-5">
             <h2 className="mb-3">¿Prefieres hablar directamente? 💙</h2>
@@ -84,22 +70,13 @@ const Contact: React.FC = () => {
                 width="100%" height="450" style={{ border: 0 }}
                 allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title='Ubicación mapa'
               ></iframe>
             </div>
           </section>
         </Container>
       </main>
 
-      <footer className="text-center py-4">
-        <p>Dirección: Av. Concha y Toro 2730, 8150215 Puente Alto, Región Metropolitana</p>
-        <p>Email: contactoTechHome@empresa.com</p>
-        <div className="redes-sociales">
-          <a href="#"><img src="/img/Facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="/img/Twitter.jpg" alt="Twitter" /></a>
-          <a href="#"><img src="/img/Instagram.png" alt="Instagram" /></a>
-        </div>
-      </footer>
-    </>
   );
 };
 

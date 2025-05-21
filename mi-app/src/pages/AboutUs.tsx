@@ -1,7 +1,3 @@
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-
-
 import MisionImg from '../assets/img/Mision.png';
 import VisionImg from '../assets/img/Vision.png';
 import ValoresImg from '../assets/img/Valores.png';
@@ -10,11 +6,9 @@ import EquipoImg from '../assets/img/EquipoTrabajo.jpg';
 
 const AboutUs: React.FC = () => {
   return (
-    <>
-      <Header />
       <main className="margeninferior">
         <section className="sobre-nosotros py-5">
-          <div className="container">
+          <div className="container-fluid">
             <h1 className="text-center mb-5">Sobre Nosotros 💜</h1>
             <div className="row">
               {/* Misión */}
@@ -87,8 +81,6 @@ const AboutUs: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 };
 

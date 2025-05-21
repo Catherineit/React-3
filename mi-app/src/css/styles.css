@@ -1,7 +1,109 @@
+
+.altura{
+    min-height: 84vh;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+header {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
+
+header .logo img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+
+
+.boton {
+    text-align: center;
+}
+
+.boton button {
+    padding: 10px 25px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton button:hover {
+    background-color: #0056b3;
+}
+
+.logo-empresa {
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.footer
+{
+    position: fixed; /* Fija el pie de página en la parte inferior de la ventana */
+    left: 0;
+    width: 100%;
+    bottom : 0;
+}
+
+.margeninferior
+{
+    margin-bottom: 20vh; /* Espacio para el pie de página */
+    
+}
+
+.about-us-img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    max-width: 300px; /* Define un ancho máximo uniforme */
+    height: 200px; /* Define una altura fija */
+    object-fit: cover; /* Recorta la imagen para que se ajuste al tamaño sin deformarse */
+    display: block; /* Asegura que se comporte como un bloque */
+    margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+.header-container{
+    background-color: #4B0082;
+}
+
+/* Mover el logo a la izquierda */
+ .logo {
+    float: left; /* Mueve el logo a la izquierda */
+    display: flex; /* Permite centrar el logo verticalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    justify-content: center; /* Centra el logo horizontalmente */
+    margin-top:20px;
+    max-width: 100px; /* Limita el ancho máximo del logo */
+    max-height: 100px; /* Limita la altura máxima del logo */
+    padding: 10px; /* Espacio alrededor del logo */
+    background-color: #4B0082; /* Morado oscuro */
+    border-radius: 100%; /* Bordes redondeados */
+}

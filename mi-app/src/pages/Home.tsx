@@ -1,6 +1,68 @@
-
-
 import React from "react";
+import Carousel from "../components/Carousel/Carousel";
+import img1 from '../assets/img/TechHome ByFalabella.jpg';
+import img2 from '../assets/img/TechHome Juegos.jpg';
+import img3 from '../assets/img/TechhomePC.jpg';
+import img4 from '../assets/img/TechHome Envios.jpg';
+
+import img5 from "../assets/img/controljuego.jpg";
+import img6 from "../assets/img/monitorgamer.jpg";
+import img7 from "../assets/img/tecladogamer.jpg";
+import img8 from "../assets/img/audifono.jpg";
+
+const datos2 = [
+  {
+    src: img5,
+    alt: "Imagen 5",
+    caption: "Primera imagen",
+    titulo: "Control de Juego",
+    subtitulo: "Disfruta de la mejor experiencia de juego con nuestro control de última generación.",
+  },
+  {
+    src: img6,
+    alt: "Imagen 6",
+    caption: "Primera imagen",
+    titulo: "Monitor Gamer",
+    subtitulo: "Imágenes nítidas y colores vibrantes para tus sesiones de juego.",
+  },
+  {
+    src: img7,
+    alt: "Imagen 7",
+    caption: "Primera imagen",
+    titulo: "Teclado Gamer",
+    subtitulo: "Teclado mecánico con retroiluminación RGB para un rendimiento superior.",
+  },
+  {
+    src: img8,
+    alt: "Imagen 8",
+    caption: "Primera imagen",
+    titulo: "Audífonos",
+    subtitulo: "Sonido envolvente para una experiencia inmersiva.",
+  },
+];
+
+const datos = [
+  {
+    src: img1,
+    alt: "Imagen 1",
+    caption: "Primera imagen",
+  },
+  {
+    src: img2,
+    alt: "Imagen 2",
+    caption: "Segunda imagen",
+  },
+  {
+    src: img3,
+    alt: "Imagen 3",
+    caption: "Tercera imagen",
+  },
+  {
+    src: img4,
+    alt: "Imagen 4",
+    caption: "Cuarta imagen",
+  },
+];
 
 const IndexPage: React.FC = () => {
   return (
@@ -18,31 +80,8 @@ const IndexPage: React.FC = () => {
         />
       </head>
 
-      <header>
-        <div className="header-container d-flex align-items-center justify-content-between p-3">
-          <div className="logo">
-            <img src="img/LogoEmpresa.png" alt="Logo de la Empresa" />
-          </div>
-          <nav>
-            <ul className="list-unstyled d-flex mb-0">
-              <li className="mx-3">
-                <a href="index.html">Inicio</a>
-              </li>
-              <li className="mx-3">
-                <a href="services.html">Servicios</a>
-              </li>
-              <li className="mx-3">
-                <a href="aboutUs.html">Nosotros</a>
-              </li>
-              <li className="mx-3">
-                <a href="contact.html">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
-      <main className="margeninferior">
+      <main className="margeninferior container-fluid">
         <section className="banner text-center py-5 bg-light">
           <h1>Bienvenidos a TechHome</h1>
           <p>
@@ -51,34 +90,13 @@ const IndexPage: React.FC = () => {
         </section>
 
         {/* Carrusel Manual (podrías reemplazar por react-slick o Bootstrap Carousel) */}
-        <section className="carousel text-center my-4">
-          <div className="carousel-images" id="carouselImages">
-            <img src="img/TechHome ByFalabella.jpg" alt="Imagen 1" />
-            <img src="img/TechHome Juegos.jpg" alt="Imagen 2" />
-            <img src="img/TechhomePC.jpg" alt="Imagen 3" />
-            <img src="img/TechHome Envios.jpg" alt="Imagen 4" />
-          </div>
-          <div className="carousel-buttons mt-2">
-            <button type="button" onClick={() => alert("prevSlide placeholder")}>
-              &#10094;
-            </button>
-            <button type="button" onClick={() => alert("nextSlide placeholder")}>
-              &#10095;
-            </button>
-          </div>
-        </section>
-
-        {/* Servicios */}
-        <section id="servicios" className="contenido container my-5">
-          <article className="primer-articulo text-center">
-            <h2>Nuestros Servicios</h2>
-            <p>Descripción de los servicios ofrecidos.</p>
-            <img src="https://picsum.photos/200/200" alt="Servicio 1" />
-          </article>
-        </section>
+        
+        <div className="mt-4">
+          <Carousel items={datos} />
+        </div>
 
         {/* Sobre Nosotros */}
-        <section className="contenido container my-5">
+        <section className="contenido  my-5">
           <article>
             <h2 className="sobre-nosotros-titulo text-center">Sobre Nosotros</h2>
             <p className="sobre-nosotros-texto text-justify">
@@ -91,100 +109,12 @@ const IndexPage: React.FC = () => {
         </section>
 
         {/* Carrusel Bootstrap Productos Destacados */}
-        <section className="container my-5">
-          <h2 className="text-center my-4">Productos Destacados</h2>
-          <div
-            id="carouselProductos"
-            className="carousel slide"
-            data-ride="carousel"
-            data-interval="5000"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src="img/controljuego.jpg"
-                  className="d-block w-100"
-                  alt="Control de Juego"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Control de Juego</h5>
-                  <p>Disfruta de la mejor experiencia de juego con nuestro control de última generación.</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="img/monitorgamer.jpg"
-                  className="d-block w-100"
-                  alt="Monitor Gamer"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Monitor Gamer</h5>
-                  <p>Imágenes nítidas y colores vibrantes para tus sesiones de juego.</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="img/tecladogamer.jpg"
-                  className="d-block w-100"
-                  alt="Teclado Gamer"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Teclado Gamer</h5>
-                  <p>Teclado mecánico con retroiluminación RGB para un rendimiento superior.</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="img/audifono.jpg"
-                  className="d-block w-100"
-                  alt="Audífonos"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Audífonos</h5>
-                  <p>Sonido envolvente para una experiencia inmersiva.</p>
-                </div>
-              </div>
-            </div>
-
-            <a
-              className="carousel-control-prev"
-              href="#carouselProductos"
-              role="button"
-              data-slide="prev"
-            >
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="sr-only">Anterior</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselProductos"
-              role="button"
-              data-slide="next"
-            >
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="sr-only">Siguiente</span>
-            </a>
-          </div>
+        <section className=" my-5">
+          <Carousel items={datos2} />
         </section>
       </main>
 
-      <footer className="bg-light py-4">
-        <div className="container text-center">
-          <p>Dirección: Av. Concha y Toro 2730, 8150215 Puente Alto, Región Metropolitana</p>
-          <p>Email: contactoTechHome@empresa.com</p>
-          <div className="redes-sociales d-flex justify-content-center gap-3">
-            <a href="#">
-              <img src="img/Facebook.png" alt="Facebook" />
-            </a>
-            <a href="#">
-              <img src="img/Twitter.jpg" alt="Twitter" />
-            </a>
-            <a href="#">
-              <img src="img/Instagram.png" alt="Instagram" />
-            </a>
-          </div>
-        </div>
-      </footer>
+      
 
       {/* Bootstrap JS y dependencias */}
       <script
